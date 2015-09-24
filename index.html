@@ -1,0 +1,11 @@
+---
+layout: page
+title: Paul Wang's Blog
+tagline: Supporting tagline
+---
+{% include JB/setup %}
+{% for post in site.posts %}
+　　　　　<li>
+			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+		</li>
+{% endfor %}
