@@ -39,7 +39,7 @@ TypeTags是一种承载所以类型信息的对象，在编译时和运行时都
 
 下面例子使用上下文绑定：
 
-```
+{% highlight scala %} 
 
 scala> import scala.reflect.runtime.{universe => ru}
 import scala.reflect.runtime.{universe=>ru}
@@ -53,9 +53,10 @@ getTypeTag: [T](obj: T)(implicit evidence$1: ru.TypeTag[T])ru.TypeTag[T]
 scala> val theType = getTypeTag(l).tpe
 theType: ru.Type = List[Int]
 
-```
 
-首先import `scala.reflect.runtime.universe`（必须先导入以便使用TypeTag），然后定义一个类型为`List[Int]`的`l`。然后我们定义一个方法
+{% endhighlight %}
+
+首先`import scala.reflect.runtime.universe`（必须先导入以便使用TypeTag），然后定义一个类型为`List[Int]`的`l`。然后我们定义一个方法a
 
 
 
